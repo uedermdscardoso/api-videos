@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Teste Prático - Samba Tech
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: User
+Implementation-Vendor-Id: dev.uedercardoso.apivideos
+Build-Jdk: 1.8.0_251
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/ApiVideos
+Created-By: Maven Integration for Eclipse
+
