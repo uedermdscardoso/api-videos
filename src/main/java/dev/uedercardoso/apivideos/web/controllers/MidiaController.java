@@ -17,19 +17,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 import dev.uedercardoso.apivideos.domain.exceptions.MediaIsEmptyException;
 import dev.uedercardoso.apivideos.domain.exceptions.MediaNotFoundException;
-import dev.uedercardoso.apivideos.domain.model.Midia;
-import dev.uedercardoso.apivideos.domain.services.MidiaService;
+import dev.uedercardoso.apivideos.domain.model.Media;
+import dev.uedercardoso.apivideos.domain.services.MediaService;
 
 @RestController
 public class MidiaController {
 
 	@Autowired
-	private MidiaService midiaService;
+	private MediaService midiaService;
 	
 	@GetMapping("{ all }")
-	public ResponseEntity<List<Midia>> getMedias(@PathVariable(required = true) Boolean all){
+	public ResponseEntity<List<Media>> getMedias(@PathVariable(required = true) Boolean all){
 		try {
-			List<Midia> medias = midiaService.getMedias(all);
+			List<Media> medias = midiaService.getMedias(all);
 			
 			return ResponseEntity.ok(medias);
 		} catch(Exception e) {
@@ -38,7 +38,7 @@ public class MidiaController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Void> create(@Valid @RequestBody Midia midia){
+	public ResponseEntity<Void> create(@Valid @RequestBody Media midia){
 		try {
 			
 			midiaService.createMedia(midia);
@@ -53,7 +53,7 @@ public class MidiaController {
 	}
 	
 	@PutMapping
-	public ResponseEntity<Void> update(@Valid @RequestBody Midia midia){
+	public ResponseEntity<Void> update(@Valid @RequestBody Media midia){
 		try {
 			
 			midiaService.updateMedia(midia);

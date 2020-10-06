@@ -18,7 +18,7 @@ import lombok.Setter;
 @Entity
 @Table(schema="test")
 @Getter @Setter
-public class Midia implements Serializable {
+public class Media implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -41,7 +41,7 @@ public class Midia implements Serializable {
 	@Column(nullable=false)
 	private Boolean deleted;
 	
-	public Midia(){
+	public Media(){
 		
 	}
 

@@ -5,13 +5,13 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import dev.uedercardoso.apivideos.domain.model.Midia;
+import dev.uedercardoso.apivideos.domain.model.Media;
 
 @Repository
-public interface MidiaRepository extends JpaRepository<Midia, Integer> {
+public interface MediaRepository extends JpaRepository<Media, Integer> {
 	
 	boolean existsById(Integer id);
 	
-	List<Midia> findByDeleted(Boolean deleted);
+	List<Media> findByDeleted(Boolean deleted);
 	
 }

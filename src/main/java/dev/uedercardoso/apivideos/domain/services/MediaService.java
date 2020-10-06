@@ -8,17 +8,17 @@ import org.springframework.stereotype.Service;
 
 import dev.uedercardoso.apivideos.domain.exceptions.MediaIsEmptyException;
 import dev.uedercardoso.apivideos.domain.exceptions.MediaNotFoundException;
-import dev.uedercardoso.apivideos.domain.model.Midia;
-import dev.uedercardoso.apivideos.domain.repository.MidiaRepository;
+import dev.uedercardoso.apivideos.domain.model.Media;
+import dev.uedercardoso.apivideos.domain.repository.MediaRepository;
 
 @Service
-public class MidiaService {
+public class MediaService {
 
 	@Autowired
-	private MidiaRepository midiaRepository;
+	private MediaRepository midiaRepository;
 	
-	public List<Midia> getMedias(Boolean all){
-		List<Midia> midias = new LinkedList<Midia>();
+	public List<Media> getMedias(Boolean all){
+		List<Media> midias = new LinkedList<Media>();
 		if(all) 
 			midias = midiaRepository.findAll();
 		else 
@@ -30,11 +30,11 @@ public class MidiaService {
 		return midias;
 	}
 	
-	public void createMedia(Midia midia) {
+	public void createMedia(Media midia) {
 		midiaRepository.save(midia);
 	}
 	
-	public void updateMedia(Midia midia) {
+	public void updateMedia(Media midia) {
 		if(midia.getId() == null || !midiaRepository.existsById(midia.getId()))
 			throw new MediaNotFoundException("Media not found");
 		midiaRepository.save(midia);
