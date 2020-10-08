@@ -2,11 +2,19 @@
 
 <h2>Sumário</h2>
 <ul>
-  <li>Endpoints</li>
   <li>Passos</li>
   <li>Swagger</li>
   <li>Testes Unitários</li>
+  <li>Endpoints</li>
 </ul>
+
+<h2>SWAGGER</h2>
+
+<ul>
+	<li>http://<b>{server}</b>:<b>{port}</b>/swagger-ui.html</li>
+	<li>http://<b>{server}</b>:<b>{port}</b>/v2/api-docs</li>
+</ul>
+
 
 <h2>Endpoints</h2>
 
@@ -27,7 +35,8 @@
 
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias/media/<b><id></b>      <b>Method: PUT</b>
 <br /> <b>Descrição:</b> Remove logicamente uma mídia
-  
+
+
 
 
 
