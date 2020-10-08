@@ -132,7 +132,7 @@ O objeto abaixo é um exemplo de como deve ser enviado como <b>raw</b> para atua
 
 <hr />
 
-<b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias/media/<b>:id</b>      <b>Method: PUT</b>
+<b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias/media/<b>:id</b>      <b>Method: DELETE</b>
 <br /> <b>Descrição:</b> Remove logicamente uma mídia
 
 
