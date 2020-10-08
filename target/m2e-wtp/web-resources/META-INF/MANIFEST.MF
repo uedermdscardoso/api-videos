@@ -7,4 +7,5 @@ Build-Jdk: 1.8.0_251
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/ApiVideos
 Created-By: Maven Integration for Eclipse
+Main-Class: dev.uedercardoso.apivideos.Application
 

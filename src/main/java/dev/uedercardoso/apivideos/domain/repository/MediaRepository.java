@@ -11,6 +11,7 @@ import dev.uedercardoso.apivideos.domain.model.Media;
 public interface MediaRepository extends JpaRepository<Media, Integer> {
 	
 	boolean existsById(Integer id);
+	Boolean existsByIdAndDeleted(Integer id, Boolean deleted);
 	
 	List<Media> findByDeleted(Boolean deleted);
 	

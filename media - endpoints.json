@@ -1,0 +1,186 @@
+{
+	"info": {
+		"_postman_id": "7cbd1f12-8114-4a35-82d8-9d0dfbfa6853",
+		"name": "Media - Endpoints",
+		"description": "Coleção de exemplos de endpoint\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/medias",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Media 3",
+							"type": "text"
+						},
+						{
+							"key": "duration",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "video",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/medias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medias"
+					]
+				},
+				"description": "POST - Adicionar mídia"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/medias/0",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/medias/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medias",
+						"0"
+					]
+				},
+				"description": "GET - Retornar mídias \n\n0 - false (Retorna as mídias exceto as que foram excluídas)\n1 - true (Retorna todas as mídias)\n\nex.: http://localhost:8080/medias/<value>\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/medias",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 13,\n\t\"name\": \"Media 3 - Alterado\",\n\t\"url\": \"https://medias-teste-pratico.s3-sa-east-1.amazonaws.com/cd423148-c8d3-4fe8-94d0-27d3ddfb1cfc-media\",\n\t\"duration\": 5,\n\t\"date\": \"2020-10-08\",\n\t\"deleted\": false\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/medias",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medias"
+					]
+				},
+				"description": "PUT - Atualiza os dados da mídia\n\nObservação: O ideal é atualizar apenas o nome e a duração que o usuário cometeu algum engano."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/medias/12",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/medias/12",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medias",
+						"12"
+					]
+				},
+				"description": "DELETE - Remove uma mídia\n\nex.: http://localhost:8080/medias/<id>"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/medias/media/11",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/medias/media/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"medias",
+						"media",
+						"11"
+					]
+				},
+				"description": "GET - Retorna apenas uma mídia de acordo com o código passado por parâmetro\n\nex.: http://localhost:8080/medias/media/<id>"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "cec652f8-b231-4c3b-a405-c1ec87facc34",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "af350009-92c1-4372-87bb-1b25a6781a8d",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

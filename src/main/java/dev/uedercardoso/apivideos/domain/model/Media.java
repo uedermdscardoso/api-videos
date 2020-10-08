@@ -1,6 +1,7 @@
 package dev.uedercardoso.apivideos.domain.model;
 
 import java.io.Serializable;
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -19,30 +20,38 @@ import lombok.Setter;
 @Table(schema="test")
 @Getter @Setter
 public class Media implements Serializable {
+	
+	private static final long serialVersionUID = 4216608522357474463L;
 
-	private static final long serialVersionUID = 1L;
-
-	@Id
+	@Id 
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
 	@Column(nullable=false)
 	private String name;
 	
-	@Column(length=512)
+	@Column(nullable=false, length=512)
 	private String url;
 	
 	private Integer duration;
 	
-	@Column(nullable=false)
+	@Column(nullable=false) //Preenchido automaticamente
 	@Temporal(TemporalType.DATE)
 	private Date date;
 	
-	@Column(nullable=false)
+	@Column(nullable=false) //Preenchido automaticamente
 	private Boolean deleted;
 	
 	public Media(){
 		
+	}
+
+	public Media(String name, String url, Integer duration) {
+		this.name = name;
+		this.url = url;
+		this.duration = duration;
+		this.date = Calendar.getInstance().getTime();
+		this.deleted = false;
 	}
 
 	public Integer getId() {

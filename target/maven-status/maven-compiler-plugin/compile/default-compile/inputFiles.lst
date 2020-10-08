@@ -1,0 +1,10 @@
+C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\documentation\SwaggerConfig.java
+C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\domain\repository\MediaRepository.java
+C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\domain\model\Media.java
+C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\domain\exceptions\MediaIsEmptyException.java
+C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\Application.java
+C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\domain\exceptions\FileIsNotVideoException.java
+C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\domain\exceptions\MediaNotFoundException.java
+C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\domain\services\MediaService.java
+C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\web\controllers\MidiaController.java
+C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\domain\exceptions\UploadFailedException.java

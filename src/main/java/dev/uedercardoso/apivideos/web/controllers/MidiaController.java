@@ -13,50 +13,77 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
+import dev.uedercardoso.apivideos.domain.exceptions.FileIsNotVideoException;
 import dev.uedercardoso.apivideos.domain.exceptions.MediaIsEmptyException;
 import dev.uedercardoso.apivideos.domain.exceptions.MediaNotFoundException;
+import dev.uedercardoso.apivideos.domain.exceptions.UploadFailedException;
 import dev.uedercardoso.apivideos.domain.model.Media;
 import dev.uedercardoso.apivideos.domain.services.MediaService;
 
 @RestController
+@RequestMapping("medias")
 public class MidiaController {
 
 	@Autowired
 	private MediaService midiaService;
 	
-	@GetMapping("{ all }")
-	public ResponseEntity<List<Media>> getMedias(@PathVariable(required = true) Boolean all){
+	@GetMapping("{all}")
+	public ResponseEntity<List<Media>> getMedias(@PathVariable(required = true) Integer all){
 		try {
-			List<Media> medias = midiaService.getMedias(all);
+			List<Media> media = midiaService.getMedias(all);
 			
-			return ResponseEntity.ok(medias);
+			return ResponseEntity.ok(media);
+		} catch(MediaIsEmptyException e) {
+			return ResponseEntity.noContent().build();
+		} catch(Exception e) {
+			return ResponseEntity.badRequest().build();
+		}
+	}
+	
+	@GetMapping("media/{id}")
+	public ResponseEntity<Media> getMedia(@PathVariable(required = true) Integer id){
+		try {
+			Media media = midiaService.getMedia(id);
+			
+			return ResponseEntity.ok(media);
+		} catch(MediaNotFoundException e) {
+			return ResponseEntity.notFound().build();
 		} catch(Exception e) {
 			return ResponseEntity.badRequest().build();
 		}
 	}
 	
 	@PostMapping
-	public ResponseEntity<Void> create(@Valid @RequestBody Media midia){
-		try {
-			
-			midiaService.createMedia(midia);
+	public ResponseEntity<Void> create(
+			@RequestParam(required=true) String name,
+			@RequestParam(required=false) Integer duration,
+			@RequestParam(required=true) MultipartFile video){
+		try {			
+			midiaService.createMedia(name, duration, video);
 			
 			return ResponseEntity.status(HttpStatus.CREATED).build();
 				
-		} catch(MediaIsEmptyException e) {
+		} catch(FileIsNotVideoException e) {
 			return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).build();
+		} catch(UploadFailedException e) {
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		} catch(MediaIsEmptyException e) {
+			return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 		} catch(Exception e) {
 			return ResponseEntity.badRequest().build();
 		}
 	}
 	
 	@PutMapping
-	public ResponseEntity<Void> update(@Valid @RequestBody Media midia){
+	public ResponseEntity<Void> update(@Valid @RequestBody Media media){
 		try {
 			
-			midiaService.updateMedia(midia);
+			midiaService.updateMedia(media);
 			
 			return ResponseEntity.status(HttpStatus.CREATED).build();
 				

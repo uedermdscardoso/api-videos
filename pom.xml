@@ -6,12 +6,12 @@
   <packaging>war</packaging>
   <name>Teste Prático - Samba Tech</name>
   
-  <parent>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>2.1.2.RELEASE</version>
-  </parent>
-  
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.1.2.RELEASE</version>
+	</parent>
+	  
   	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -41,12 +41,39 @@
 		    <scope>provided</scope>
 		</dependency>
 		
+		<!-- Swagger-->
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger2</artifactId>
+		    <version>2.9.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger-ui</artifactId>
+		    <version>2.9.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.amazonaws</groupId>
+		    <artifactId>aws-java-sdk-s3</artifactId>
+		    <version>1.11.877</version>
+		</dependency>
+		
+		<!-- UUID -->
+		<dependency>
+		    <groupId>com.fasterxml.uuid</groupId>
+		    <artifactId>java-uuid-generator</artifactId>
+		    <version>4.0.1</version>
+		</dependency>
+		
 	</dependencies>
   
   	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<start-class>dev.uedercardoso.apivideos.Application</start-class>
 	</properties>
   
   	<build>
