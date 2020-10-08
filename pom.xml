@@ -73,11 +73,13 @@
 		    <version>4.0.1</version>
 		</dependency>
 		
+		<!-- Upload file -->
 		<dependency>
-    <groupId>commons-fileupload</groupId>
-    <artifactId>commons-fileupload</artifactId>
-    <version>1.2</version>
-</dependency>
+		    <groupId>commons-fileupload</groupId>
+		    <artifactId>commons-fileupload</artifactId>
+		    <version>1.2</version>
+		</dependency>
+
 	</dependencies>
   
   	<properties>
