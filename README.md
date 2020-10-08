@@ -3,7 +3,7 @@
 <h2>Sumário</h2>
 <ul>
   <li>Passos</li>
-  <li>Configuração - Amazon S3</li>
+  <li>Configurações</li>
   <li>Swagger</li>
   <li>Testes Unitários</li>
   <li>Endpoints</li>
@@ -22,17 +22,43 @@
 </ol>
 
 
-<h2>Configuração - Amazon S3</h2>
+<h2>Configurações</h2>
 
 Observação: Já tem um bucket criado com devidas configurações e podem ser usadas para teste.
 
--> Informe o nome do bucket, URL no domain, accessKey e secretKey no arquivo application.properties <b>( package 'src/main/resources' )</b>.
+<h3>Amazon S3<h3>
+
+- Informe o nome do bucket, URL no domain, accessKey e secretKey no arquivo application.properties <b>( package 'src/main/resources' )</b>.
 ```
 aws.bucketName=your-bucket-name
 aws.domain=s3-sa-east-1.amazonaws.com
 aws.accessKey=your-accessKey
 aws.secretKey=your-secretKey
 ```
+
+<h3>Detalhes<h3>
+
+<p>
+- O tamanho máximo do arquivo para ser feito upload é de até <b>50 MB</b> e pode ser alterado no arquivo <b>application.properties</b>
+```
+spring.servlet.multipart.max-file-size=50MB
+spring.servlet.multipart.max-request-size=50MB
+server.tomcat.max-http-post-size=500000000
+server.tomcat.max-swallow-size=500000000
+```	
+</p>
+
+<p>
+- Atenta-se os dados de conexão do banco de dados que está sendo utilizado
+```
+spring.datasource.url=jdbc:mysql://localhost:3306/<b>your-database</b>?useTimezone=true&serverTimezone=UTC
+spring.datasource.username=your-username
+spring.datasource.password=your-password
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+```
+</p>
+	
 
 <h2>Swagger</h2>
 
