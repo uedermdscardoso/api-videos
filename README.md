@@ -87,8 +87,12 @@ Os testes unitários estão na pasta <b>src/test/java</b> e o vídeo de exemplo 
 
 <h2>Endpoints</h2>
 
+<h3>Adiciona mídia</h3>
+
+Observação: Precisa passar três campos: name (String), duration (Integer) e video (File) no body e no tipo form-data <b>(Usando postman)</b>.
+
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias      <b>Method: POST</b>
-<br /> <b>Descrição:</b> Adiciona mídia
+
 
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias/0      <b>Method: GET</b>
 <br /> <b>Descrição:</b> Obtém apenas as mídias que não foram excluídas
