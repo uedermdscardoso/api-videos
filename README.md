@@ -72,6 +72,19 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
 </ul>
 
 
+<h2>Testes Unitários</h2>
+
+Observação: Atenta-se se contém o vídeo chamado <b>city-and-car-3d.mp4</b> no caminho <b>src/test/resources/dev/uedercardoso/apivideos</b>, verifique se uma mídia contrém o <b>id 15</b> para os testes de addMedia, updateMedia e removeMedia. E se existe <b>id 11</b> para o teste getUniqueMedia; 
+
+Os testes unitários estão na pasta <b>src/test/java</b> e o vídeo de exemplo que será usado pelo teste unitário está nesse caminho <b>src/test/resources/dev/uedercardoso/apivideos</b>.
+
+<h3>Execução</h3>
+<ul>
+  <li>Clicar botão direito do seu projeto</li>
+  <li>Clique na opção 'Run As'</li> 
+  <li>Clique na opção 'JUnit Test'</li>
+</ul>
+
 <h2>Endpoints</h2>
 
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias      <b>Method: POST</b>
