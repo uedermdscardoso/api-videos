@@ -2,12 +2,20 @@
 
 <h2>Sumário</h2>
 <ol>
+  <li>Lembrete</li>
   <li>Passos</li>
   <li>Configurações</li>
   <li>Swagger</li>
   <li>Testes Unitários</li>
   <li>Endpoints</li>
 </ol>
+
+<h2>Lembrete</h2> 
+
+<ul>
+  <li>Para executar o projeto, clica com botão direito no seu projeto, clique em <b>Run As</b>, depois <b>Maven build...</b>, adicione <b>spring-boot:run</b> no <b>Goals</b> e clique em <b>Run</b></li>
+</ul>
+
 
 <h2>Passos</h2>
 
