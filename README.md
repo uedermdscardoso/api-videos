@@ -1,13 +1,13 @@
 ## DOCUMENTAÇÃO
 
 <h2>Sumário</h2>
-<ul>
+<ol>
   <li>Passos</li>
   <li>Configurações</li>
   <li>Swagger</li>
   <li>Testes Unitários</li>
   <li>Endpoints</li>
-</ul>
+</ol>
 
 <h2>Passos</h2>
 
@@ -79,11 +79,11 @@ Observação: Atenta-se se contém o vídeo chamado <b>city-and-car-3d.mp4</b> n
 Os testes unitários estão na pasta <b>src/test/java</b> e o vídeo de exemplo que será usado pelo teste unitário está nesse caminho <b>src/test/resources/dev/uedercardoso/apivideos</b>.
 
 <h3>Execução</h3>
-<ul>
+<ol>
   <li>Clicar botão direito do seu projeto</li>
   <li>Clique na opção 'Run As'</li> 
   <li>Clique na opção 'JUnit Test'</li>
-</ul>
+</ol>
 
 <h2>Endpoints</h2>
 
