@@ -8,7 +8,19 @@
   <li>Endpoints</li>
 </ul>
 
-<h2>SWAGGER</h2>
+<h2>Passos</h2>
+
+<ol>
+  <li>Crie duas mídias - <b>(Use os vídeos disponibilizados na pasta '/videos' do repositório)</b></li>
+  <li>Lista todas as mídias inclusive aquelas que foram excluídas - <b>(Passando o parâmetro como '1' que significa 'true' para todos)</b></li>
+  <li>Obtém apenas uma mídia através de um id</li>
+  <li>Atualize uma das mídias</li>
+  <li>Remove uma mídia passando o id de uma das mídias</li>
+  <li>Lista todas as mídias exceto aquela que foram excluídas - <b>Passando o valor '0' que significado 'false' pra todos</b></li>
+</ol>
+
+
+<h2>Swagger</h2>
 
 <ul>
 	<li>http://<b>{server}</b>:<b>{port}</b>/swagger-ui.html</li>
