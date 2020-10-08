@@ -39,7 +39,7 @@ aws.secretKey=your-secretKey
 <h3>Detalhes</h3>
 
 <p>
-<p>O tamanho máximo do arquivo para ser feito upload é de até <b>50 MB</b> e pode ser alterado no arquivo <b>application.properties</b></p>
+O tamanho máximo do arquivo para ser feito upload é de até <b>50 MB</b> e pode ser alterado no arquivo <b>application.properties</b>
 ```
 spring.servlet.multipart.max-file-size=50MB
 spring.servlet.multipart.max-request-size=50MB
