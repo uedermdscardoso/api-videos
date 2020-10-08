@@ -1,6 +1,6 @@
 ## DOCUMENTAÇÃO
 
-<h3>Sumário</h3>
+<h2>Sumário</h2>
 <ul>
   <li>Passos</li>
   <li>Swagger</li>
@@ -8,7 +8,7 @@
   <li>Endpoints</li>
 </ul>
 
-<h3>SWAGGER</h3>
+<h2>SWAGGER</h2>
 
 <ul>
 	<li>http://<b>{server}</b>:<b>{port}</b>/swagger-ui.html</li>
@@ -16,7 +16,7 @@
 </ul>
 
 
-<h3>Endpoints</h3>
+<h2>Endpoints</h2>
 
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias      <b>Method: POST</b>
 <br /> <b>Descrição:</b> Adiciona mídia
