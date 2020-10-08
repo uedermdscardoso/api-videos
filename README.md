@@ -28,7 +28,7 @@ Observação: Já tem um bucket criado com devidas configurações e podem ser u
 
 <h3>Amazon S3</h3>
 
-- Informe o nome do bucket, URL no domain, accessKey e secretKey no arquivo application.properties <b>( package 'src/main/resources' )</b>.
+Informe o nome do bucket, URL no domain, accessKey e secretKey no arquivo application.properties <b>( package 'src/main/resources' )</b>.
 ```
 aws.bucketName=your-bucket-name
 aws.domain=s3-sa-east-1.amazonaws.com
@@ -39,7 +39,7 @@ aws.secretKey=your-secretKey
 <h3>Detalhes</h3>
 
 <p>
-- O tamanho máximo do arquivo para ser feito upload é de até <b>50 MB</b> e pode ser alterado no arquivo <b>application.properties</b>
+<p>O tamanho máximo do arquivo para ser feito upload é de até <b>50 MB</b> e pode ser alterado no arquivo <b>application.properties</b></p>
 ```
 spring.servlet.multipart.max-file-size=50MB
 spring.servlet.multipart.max-request-size=50MB
