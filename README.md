@@ -28,7 +28,7 @@ Observação: Já tem um bucket criado com devidas configurações e podem ser u
 
 <h3>Amazon S3</h3>
 
-Informe o nome do bucket, URL no domain, accessKey e secretKey no arquivo application.properties <b>( package 'src/main/resources' )</b> e os passados para a criação do bucket e obtenção do access key/secret key pode ser feito através desse artigo <a href="https://medium.com/@shamnad.p.s/how-to-create-an-s3-bucket-and-aws-access-key-id-and-secret-access-key-for-accessing-it-5653b6e54337" target="__blank">aqui</a>.
+Informe o nome do bucket, URL no domain, accessKey e secretKey no arquivo application.properties <b>( package 'src/main/resources' )</b> e para a criação do bucket e obtenção do access key/secret key pode ser feito através desse artigo <a href="https://medium.com/@shamnad.p.s/how-to-create-an-s3-bucket-and-aws-access-key-id-and-secret-access-key-for-accessing-it-5653b6e54337">aqui</a>.
 ```
 aws.bucketName=your-bucket-name
 aws.domain=s3-sa-east-1.amazonaws.com
