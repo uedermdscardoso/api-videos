@@ -15,6 +15,7 @@
 <ul>
   <li>Para executar o projeto, clica com botão direito no seu projeto, clique em <b>Run As</b>, depois <b>Maven build...</b>, adicione <b>spring-boot:run</b> no <b>Goals</b> e clique em <b>Run</b></li>
   <li>Verifique se o seu banco de dados está rodando e está configurado corretamente no arquivo <b>application.properties</b></li>
+  <li>A coleção de endpoints está no arquivo <b>'media - endpoints.json'</b> que pode ser importado no programa <b>postman</b></li>
 </ul>
 
 
