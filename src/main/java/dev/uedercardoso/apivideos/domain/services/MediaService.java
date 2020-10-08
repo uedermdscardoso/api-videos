@@ -101,6 +101,9 @@ public class MediaService {
 		midiaRepository.save(media);
 	}
 	
+	//https://objectivefs.com/howto/how-to-get-amazon-s3-keys#:~:text=Go%20to%20http%3A%2F%2Faws,Get%20Started%20with%20IAM%20Users%E2%80%9D.
+	//https://blog.mandic.com.br/artigos/upload-pro-s3-o-mais-simples-possivel-em-java/
+	//https://docs.aws.amazon.com/pt_br/AmazonS3/latest/dev/UploadObjSingleOpJava.html
 	private String uploadMedia(MultipartFile video) throws IOException, AmazonServiceException, SdkClientException, Exception {
 		
         try {
@@ -140,7 +143,7 @@ public class MediaService {
 	
 	private boolean isVideoFile(MultipartFile video) {
 	    String mimeType = video.getContentType();
-	    return mimeType != null && mimeType.startsWith("video");
+	    return mimeType != null && (mimeType.startsWith("video"));
 	}
 	
 	

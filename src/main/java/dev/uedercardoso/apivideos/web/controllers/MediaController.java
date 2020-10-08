@@ -27,15 +27,15 @@ import dev.uedercardoso.apivideos.domain.services.MediaService;
 
 @RestController
 @RequestMapping("medias")
-public class MidiaController {
+public class MediaController {
 
 	@Autowired
-	private MediaService midiaService;
+	private MediaService mediaService;
 	
 	@GetMapping("{all}")
 	public ResponseEntity<List<Media>> getMedias(@PathVariable(required = true) Integer all){
 		try {
-			List<Media> media = midiaService.getMedias(all);
+			List<Media> media = mediaService.getMedias(all);
 			
 			return ResponseEntity.ok(media);
 		} catch(MediaIsEmptyException e) {
@@ -48,7 +48,7 @@ public class MidiaController {
 	@GetMapping("media/{id}")
 	public ResponseEntity<Media> getMedia(@PathVariable(required = true) Integer id){
 		try {
-			Media media = midiaService.getMedia(id);
+			Media media = mediaService.getMedia(id);
 			
 			return ResponseEntity.ok(media);
 		} catch(MediaNotFoundException e) {
@@ -64,7 +64,7 @@ public class MidiaController {
 			@RequestParam(required=false) Integer duration,
 			@RequestParam(required=true) MultipartFile video){
 		try {			
-			midiaService.createMedia(name, duration, video);
+			mediaService.createMedia(name, duration, video);
 			
 			return ResponseEntity.status(HttpStatus.CREATED).build();
 				
@@ -83,9 +83,9 @@ public class MidiaController {
 	public ResponseEntity<Void> update(@Valid @RequestBody Media media){
 		try {
 			
-			midiaService.updateMedia(media);
+			mediaService.updateMedia(media);
 			
-			return ResponseEntity.status(HttpStatus.CREATED).build();
+			return ResponseEntity.ok().build();
 				
 		} catch(MediaNotFoundException e) {
 			return ResponseEntity.notFound().build();
@@ -98,7 +98,7 @@ public class MidiaController {
 	public ResponseEntity<Void> remove(@PathVariable(required=true) Integer id){
 		try {
 			
-			midiaService.removeMedia(id);
+			mediaService.removeMedia(id);
 			
 			return ResponseEntity.ok().build();
 				

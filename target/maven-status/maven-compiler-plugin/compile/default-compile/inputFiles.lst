@@ -6,5 +6,5 @@ C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\sr
 C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\domain\exceptions\FileIsNotVideoException.java
 C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\domain\exceptions\MediaNotFoundException.java
 C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\domain\services\MediaService.java
-C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\web\controllers\MidiaController.java
 C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\domain\exceptions\UploadFailedException.java
+C:\Users\User\Documents\workspace-spring-tool-suite-4-4.7.1.RELEASE\ApiVideos\src\main\java\dev\uedercardoso\apivideos\web\controllers\MediaController.java
