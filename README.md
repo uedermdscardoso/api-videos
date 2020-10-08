@@ -3,6 +3,7 @@
 <h2>Sumário</h2>
 <ul>
   <li>Passos</li>
+  <li>Configuração - Amazon S3</li>
   <li>Swagger</li>
   <li>Testes Unitários</li>
   <li>Endpoints</li>
@@ -11,14 +12,27 @@
 <h2>Passos</h2>
 
 <ol>
+  <li>Verifique as configurações com a Amazon S3</li>
   <li>Crie duas mídias - <b>(Use os vídeos disponibilizados na pasta '/videos' do repositório)</b></li>
   <li>Lista todas as mídias inclusive aquelas que foram excluídas - <b>(Passando o parâmetro como '1' que significa 'true' para todos)</b></li>
   <li>Obtém apenas uma mídia através de um id</li>
   <li>Atualize uma das mídias</li>
   <li>Remove uma mídia passando o id de uma das mídias</li>
-  <li>Lista todas as mídias exceto aquela que foram excluídas - <b>Passando o valor '0' que significado 'false' pra todos</b></li>
+  <li>Lista todas as mídias exceto aquela que foram excluídas - <b>(Passando o valor '0' que significado 'false' pra todos)</b></li>
 </ol>
 
+
+<h2>Configuração - Amazon S3</h2>
+
+Observação: Já tem um bucket criado com devidas configurações e podem ser usadas para teste.
+
+-> Informe o nome do bucket, URL no domain, accessKey e secretKey no arquivo application.properties <b>( package 'src/main/resources' )</b>.
+```
+aws.bucketName=your-bucket-name
+aws.domain=s3-sa-east-1.amazonaws.com
+aws.accessKey=your-accessKey
+aws.secretKey=your-secretKey
+```
 
 <h2>Swagger</h2>
 
