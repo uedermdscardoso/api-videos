@@ -53,7 +53,7 @@ server.tomcat.max-swallow-size=500000000
 
 Atenta-se os dados de conexão do banco de dados que está sendo utilizado
 ```
-spring.datasource.url=jdbc:mysql://<b>{server}</b>:<b>{port}</b>/<b>{your-database}</b>?useTimezone=true&serverTimezone=UTC
+spring.datasource.url=jdbc:mysql://{server}:{port}/{your-database}?useTimezone=true&serverTimezone=UTC
 spring.datasource.username=your-username
 spring.datasource.password=your-password
 spring.datasource.driver-class-name=com.mysql.jdbc.Driver
