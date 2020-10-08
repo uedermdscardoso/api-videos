@@ -27,13 +27,13 @@
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias/1      <b>Method: GET</b>
 <br /> <b>Descrição:</b> Obtém todas as mídias inclusive aquelas que não foram excluídas
 
-<b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias/media/<b><id></b>      <b>Method: GET</b>
+<b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias/media/<b>:id</b>      <b>Method: GET</b>
 <br /> <b>Descrição:</b> Obtém apenas uma mídia do id que foi informado na URL
 
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias      <b>Method: PUT</b>
 <br /> <b>Descrição:</b> Atualiza as informações da mídia
 
-<b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias/media/<b><id></b>      <b>Method: PUT</b>
+<b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias/media/<b>:id</b>      <b>Method: PUT</b>
 <br /> <b>Descrição:</b> Remove logicamente uma mídia
 
 
