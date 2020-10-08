@@ -87,12 +87,12 @@ Os testes unitários estão na pasta <b>src/test/java</b> e o vídeo de exemplo 
 
 <h2>Endpoints</h2>
 
-<h3>Adiciona mídia</h3>
-
 Observação: Precisa passar três campos: name (String), duration (Integer) e video (File) no body e no tipo form-data <b>(Usando postman)</b>.
 
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias      <b>Method: POST</b>
+<br /> <b>Descrição:</b> Adicionar mídia
 
+<hr />
 
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias/0      <b>Method: GET</b>
 <br /> <b>Descrição:</b> Obtém apenas as mídias que não foram excluídas
@@ -103,8 +103,24 @@ Observação: Precisa passar três campos: name (String), duration (Integer) e v
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias/media/<b>:id</b>      <b>Method: GET</b>
 <br /> <b>Descrição:</b> Obtém apenas uma mídia do id que foi informado na URL
 
+<hr />
+
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias      <b>Method: PUT</b>
 <br /> <b>Descrição:</b> Atualiza as informações da mídia
+
+```
+O objeto abaixo é um exemplo de como deve ser enviado como <b>raw</b> para atualizar mídia <b>( com id )</b>
+{
+	"id": 13,
+	"name": "Media 3 - Alterado",
+	"url": "https://medias-teste-pratico.s3-sa-east-1.amazonaws.com/cd423148-c8d3-4fe8-94d0-27d3ddfb1cfc-media",
+	"duration": 5,
+	"date": "2020-10-08",
+	"deleted": false
+}
+```
+
+<hr />
 
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias/media/<b>:id</b>      <b>Method: PUT</b>
 <br /> <b>Descrição:</b> Remove logicamente uma mídia
