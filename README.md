@@ -87,7 +87,7 @@ Os testes unitários estão na pasta <b>src/test/java</b> e o vídeo de exemplo 
 
 <h2>Endpoints</h2>
 
-Observação: Precisa passar três campos: name (String), duration (Integer) e video (File) no body e no tipo form-data <b>(Usando postman)</b>.
+Observação: Precisa passar três campos: <b>name</b> (String), <b>duration</b> (Integer) e <b>video</b> (File) no body e no tipo form-data <b>(Usando postman)</b>.
 
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias      <b>Method: POST</b>
 <br /> <b>Descrição:</b> Adicionar mídia
@@ -108,8 +108,8 @@ Observação: Precisa passar três campos: name (String), duration (Integer) e v
 <b>URL: </b> http://<b>{server}</b>:<b>{port}</b>/medias      <b>Method: PUT</b>
 <br /> <b>Descrição:</b> Atualiza as informações da mídia
 
-```
 O objeto abaixo é um exemplo de como deve ser enviado como <b>raw</b> para atualizar mídia <b>( com id )</b>
+```
 {
 	"id": 13,
 	"name": "Media 3 - Alterado",
