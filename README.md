@@ -28,7 +28,7 @@
   <li>Obtém apenas uma mídia através de um id</li>
   <li>Atualize uma das mídias</li>
   <li>Remove uma mídia passando o id de uma das mídias</li>
-  <li>Lista todas as mídias exceto aquelas que foram excluídas - <b>(Passando o valor '0' que significa 'false' pra todos)</b></li>
+  <li>Lista todas as mídias exceto aquelas que foram excluídas - <b>(Passando o valor '0' que significa 'false' para todos)</b></li>
 </ol>
 
 
