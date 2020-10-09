@@ -24,7 +24,7 @@
 <ol>
   <li>Verifique as configurações com a Amazon S3</li>
   <li>Crie duas mídias - <b>(Use os vídeos disponibilizados na pasta '/videos' do repositório)</b></li>
-  <li>Lista todas as mídias inclusive aquelas que foram excluídas - <b>(Passando o parâmetro como '1' que significa 'true' para todos)</b></li>
+  <li>Lista todas as mídias inclusive aquelas que foram excluídas - <b>(Passando o valor '1' que significa 'true' para todos)</b></li>
   <li>Obtém apenas uma mídia através de um id</li>
   <li>Atualize uma das mídias</li>
   <li>Remove uma mídia passando o id de uma das mídias</li>
